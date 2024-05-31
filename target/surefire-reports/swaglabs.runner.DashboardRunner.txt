@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: swaglabs.runner.DashboardRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.815 s - in swaglabs.runner.DashboardRunner
