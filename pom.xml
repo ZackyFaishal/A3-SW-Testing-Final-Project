@@ -63,7 +63,17 @@
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.13.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.4.0</version> <!-- Versi terbaru saat ini, ganti jika diperlukan -->
+            <scope>test</scope> <!-- Pastikan dependensi ini hanya digunakan untuk pengujian -->
+        </dependency>
+            
     </dependencies>
+
+
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
