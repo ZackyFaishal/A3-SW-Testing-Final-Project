@@ -2,10 +2,12 @@ swaglabs\runner\LoginRunner.class
 swaglabs\runner\DashboardRunner.class
 swaglabs\utility\Hooks.class
 swaglabs\pages\DashboardPage.class
+apiusercontroller\runner\CreateRunner.class
 apiusercontroller\StepDefinitions\GetMethodSteps.class
 swaglabs\runner\LogoutRunner.class
 swaglabs\StepDefinitions\LoginSteps.class
 swaglabs\pages\CartPage.class
+apiusercontroller\StepDefinitions\CreateMethodSteps.class
 swaglabs\runner\TestRunner.class
 apiusercontroller\runner\GetRunner.class
 swaglabs\StepDefinitions\DashboardSteps.class
