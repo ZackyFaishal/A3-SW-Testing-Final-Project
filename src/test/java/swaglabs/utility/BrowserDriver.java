@@ -12,7 +12,7 @@ public class BrowserDriver {
 
     public BrowserDriver() {
         System.setProperty("webdriver.chrome.driver",
-                "C:/POLBAN MATERI/SEMESTER 6/Pengujian Perangkat Lunak/Praktek/Tubes/A3-SW-Testing-Final-Project/src/test/resources/drivers/chromedriver.exe");
+                "E:/Kuliah/SEMESTER 6/Pengujian Perangkat Lunak/Praktek/Tubes/A3-SW-Testing-Final-Project/src/test/resources/drivers/chromedriver.exe");
 
         options = new ChromeOptions();
         options.addArguments("--disable-notifications");
