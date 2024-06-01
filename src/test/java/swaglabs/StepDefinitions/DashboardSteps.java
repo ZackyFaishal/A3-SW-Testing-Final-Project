@@ -23,7 +23,7 @@ public class DashboardSteps {
     DashboardPage dashboardPage;
 
 
-    @Given("I am has logged in with valid credentials")
+    @Given("I have logged in with valid credentials")
     public void login_with_valid_credentials() {
         BrowserDriver.driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage(BrowserDriver.driver);

@@ -13,7 +13,12 @@ public class CartPage {
         this.driver = driver;
     }
 
-    public static void cartList(){
+    public static String cartList(){
         String cartList = BrowserDriver.driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]")).getText();
+        return cartList;
+    }
+
+    public static void click_checkout(){
+        BrowserDriver.driver.findElement(By.xpath("//*[@id=\"checkout\"]")).click();
     }
 }
