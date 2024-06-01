@@ -6,10 +6,13 @@ apiusercontroller\runner\CreateRunner.class
 apiusercontroller\StepDefinitions\GetMethodSteps.class
 swaglabs\runner\LogoutRunner.class
 swaglabs\StepDefinitions\LoginSteps.class
+swaglabs\runner\ProductDetailRunner.class
 swaglabs\pages\CartPage.class
 apiusercontroller\StepDefinitions\CreateMethodSteps.class
+swaglabs\pages\DetailProductPage.class
 swaglabs\runner\TestRunner.class
 apiusercontroller\runner\GetRunner.class
 swaglabs\StepDefinitions\DashboardSteps.class
+swaglabs\StepDefinitions\ProductDetailteps.class
 swaglabs\utility\BrowserDriver.class
 swaglabs\pages\LoginPage.class

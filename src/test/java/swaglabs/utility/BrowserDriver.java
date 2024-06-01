@@ -10,8 +10,9 @@ public class BrowserDriver {
 
     public ChromeOptions options;
 
-    public BrowserDriver(){
-        System.setProperty("webdriver.chrome.driver", "C:/POLBAN MATERI/SEMESTER 6/Pengujian Perangkat Lunak/Praktek/Week 11/AutomationTestingWeb/src/test/resources/drivers/chromedriver.exe");
+    public BrowserDriver() {
+        System.setProperty("webdriver.chrome.driver",
+                "E:/Kuliah/SEMESTER 6/Pengujian Perangkat Lunak/Praktek/Tubes/A3-SW-Testing-Final-Project/src/test/resources/drivers/chromedriver.exe");
 
         options = new ChromeOptions();
         options.addArguments("--disable-notifications");
@@ -22,7 +23,7 @@ public class BrowserDriver {
 
     }
 
-    public void close(){
+    public void close() {
         if (this.driver != null) {
             this.driver.close();
             this.driver = null;

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 31, 2024 09:38:30 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jun 1, 2024 01:00:13 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('category-view')">
@@ -76,7 +71,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -84,31 +79,31 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@Create</a>
+<a class="dropdown-item" href="#">@ProductDetail</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Testing POST Method for Creating User</p>
+            <p class="name">Product Detail</p>
             <p class="text-sm">
-              <span>9:38:31 AM</span> / <span>00:00:05:223</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>1:00:14 PM</span> / <span>00:00:22:551</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Testing POST Method for Creating User</h5>
-<span class='badge badge-success'>05.31.2024 9:38:31 AM</span>
-<span class='badge badge-danger'>05.31.2024 9:38:36 AM</span>
-<span class='badge badge-default'>00:00:05:223</span>
+<h5 class="test-status text-pass">Product Detail</h5>
+<span class='badge badge-success'>06.01.2024 1:00:14 PM</span>
+<span class='badge badge-danger'>06.01.2024 1:00:37 PM</span>
+<span class='badge badge-default'>00:00:22:551</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -120,57 +115,28 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Create a user successfully</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iHaveUserDataToCreate()">
-                <span>Given I have user data to create</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iSendAPOSTRequestToCreateTheUser()">
-                <span>When I send a POST request to create the user</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iShouldReceiveASuccessResponseWithStatusCode(int)">
-                <span>Then I should receive a success response with status code 200</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: Unexpected status code expected:<200> but was:<400>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at apiusercontroller.StepDefinitions.CreateMethodSteps.iShouldReceiveASuccessResponseWithStatusCode(CreateMethodSteps.java:87)
-	at ?.I should receive a success response with status code 200(file:///C:/POLBAN%20MATERI/SEMESTER%206/Pengujian%20Perangkat%20Lunak/Praktek/Tubes/A3-SW-Testing-Final-Project/src/test/java/apiusercontroller/features/CreateMethod.feature:7)
-</textarea>
-      
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Attempt to create a user with an email that is already in use</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User views product details</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iHaveUserDataWithAnEmailThatIsAlreadyInUse()">
-                <span>Given I have user data with an email that is already in use</span>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_has_logged_in_with_valid_credentials()">
+                <span>Given User has logged in with valid credentials</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iSendAPOSTRequestToCreateTheUser()">
-                <span>When I send a POST request to create the user</span>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.i_am_on_the_dashboard_page()">
+                <span>Given User is on the dashboard page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iShouldReceiveAnErrorResponseWithStatusCode(int)">
-                <span>Then I should receive an error response with status code 400</span>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_clicks_on_the_product_title_of_on_the_dashboard_page()">
+                <span>When User clicks on the product title of Sauce Labs Backpack on the dashboard page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_sees_the_image_name_description_and_price_information_of()">
+                <span>Then User sees the image, name, description, and price information of Sauce Labs Backpack</span>
       <div>
       </div>
               </div>
@@ -180,57 +146,28 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="10"><span class="badge log fail-bg mr-2">Fail</span>Attempt to create a user with a last name exceeding 50 characters</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iHaveUserDataWithALastNameExceeding50Characters()">
-                <span>Given I have user data with a last name exceeding 50 characters</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iSendAPOSTRequestToCreateTheUser()">
-                <span>When I send a POST request to create the user</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iShouldReceiveASuccessResponseWithStatusCode(int)">
-                <span>Then I should receive a success response with status code 200</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: Unexpected status code expected:<200> but was:<400>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at apiusercontroller.StepDefinitions.CreateMethodSteps.iShouldReceiveASuccessResponseWithStatusCode(CreateMethodSteps.java:87)
-	at ?.I should receive a success response with status code 200(file:///C:/POLBAN%20MATERI/SEMESTER%206/Pengujian%20Perangkat%20Lunak/Praktek/Tubes/A3-SW-Testing-Final-Project/src/test/java/apiusercontroller/features/CreateMethod.feature:17)
-</textarea>
-      
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Attempt to create a user with a blank first name</div>
+        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>User adds product to cart</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iHaveUserDataWithABlankFirstName()">
-                <span>Given I have user data with a blank first name</span>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_has_logged_in_with_valid_credentials()">
+                <span>Given User has logged in with valid credentials</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iSendAPOSTRequestToCreateTheUser()">
-                <span>When I send a POST request to create the user</span>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_is_on_the_product_detail_page()">
+                <span>Given User is on the product detail page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.CreateMethodSteps.iShouldReceiveAnErrorResponseWithStatusCode(int)">
-                <span>Then I should receive an error response with status code 400</span>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_clicks_the_add_to_cart_button()">
+                <span>When User clicks the add to cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.the_product_is_added_to_the_cart()">
+                <span>Then The product is added to the cart</span>
       <div>
       </div>
               </div>
@@ -240,130 +177,32 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>Attempt to create a user with a blank email</div>
+        <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>User back to the dashboard page from the product detail page</div>
       </div>
     </div>
-        <div class="scenario_outline collapse">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Attempt to create a user with a blank email</div>
-                </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_has_logged_in_with_valid_credentials()">
+                <span>Given User has logged in with valid credentials</span>
+      <div>
+      </div>
               </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given I have user data with a blank email</span>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_is_on_the_product_detail_page()">
+                <span>Given User is on the product detail page</span>
       <div>
       </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I send a POST request to create the user</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then I should receive an error response with status code 400</span>
-      <div>
-      </div>
-                  </div>
               </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="23"><span class="badge log pass-bg mr-2">Pass</span>Attempt to create a user with a blank email</div>
-                </div>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_clicks_the_back_to_products_button()">
+                <span>When User clicks the back to products button</span>
+      <div>
+      </div>
               </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given I have user data with a blank email</span>
+              <div class="step pass-bg" title="swaglabs.StepDefinitions.ProductDetailteps.user_is_navigated_to_the_dashboard_page()">
+                <span>Then User is navigated to the dashboard page</span>
       <div>
       </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I send a POST request to create the user</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then I should receive an error response with status code 400</span>
-      <div>
-      </div>
-                  </div>
               </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>Attempt to create a user with a blank email</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given I have user data with a blank email</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I send a POST request to create the user</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then I should receive an error response with status code 400</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="31"><span class="badge log pass-bg mr-2">Pass</span>Attempt to create a user with a blank email</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given I have user data with a blank email</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I send a POST request to create the user</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then I should receive an error response with status code 400</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="35"><span class="badge log pass-bg mr-2">Pass</span>Attempt to create a user with a blank email</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given I have user data with a blank email</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I send a POST request to create the user</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then I should receive an error response with status code 400</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
+          </div>
         </div>
   </div>
 </div>
@@ -378,69 +217,7 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>2</span>
-</span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">2 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:38:33 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='5'>Then I should receive a success response with status code 200</a>
-<div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Create a user successfully.Then I should receive a success response with status code 200</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:38:34 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='13'>Then I should receive a success response with status code 200</a>
-<div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Attempt to create a user with a last name exceeding 50 characters.Then I should receive a success response with status code 200</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-wrapper row view category-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
@@ -451,17 +228,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>7</span>
-<span class='badge log badge-danger'>2</span>
+<span class='badge log pass-bg'>3</span>
 </span>
-<p class="name">@Create</p>
-<p class="duration text-sm">9 tests</p>
+<p class="name">@ProductDetail</p>
+<p class="duration text-sm">3 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@Create</h4>
-<span status="pass" class='badge log pass-bg'>7 passed</span>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<h4>@ProductDetail</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -472,93 +247,33 @@
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:38:31 AM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:00:14 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Create a user successfully</a>
+<a href="#" class="linked" test-id='1' id='2'>User views product details</a>
 <div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Create a user successfully</span>
+<span class="badge badge-default">Product Detail.User views product details</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:38:33 AM</td>
+<td>13:00:24 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='6'>Attempt to create a user with an email that is already in use</a>
+<a href="#" class="linked" test-id='1' id='9'>User adds product to cart</a>
 <div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Attempt to create a user with an email that is already in use</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>09:38:34 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='10'>Attempt to create a user with a last name exceeding 50 characters</a>
-<div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Attempt to create a user with a last name exceeding 50 characters</span>
+<span class="badge badge-default">Product Detail.User adds product to cart</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>09:38:34 AM</td>
+<td>13:00:30 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='14'>Attempt to create a user with a blank first name</a>
+<a href="#" class="linked" test-id='1' id='16'>User back to the dashboard page from the product detail page</a>
 <div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Attempt to create a user with a blank first name</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>09:38:34 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='19'>Attempt to create a user with a blank email</a>
-<div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Attempt to create a user with a blank email</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>09:38:35 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='23'>Attempt to create a user with a blank email</a>
-<div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Attempt to create a user with a blank email</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>09:38:35 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='27'>Attempt to create a user with a blank email</a>
-<div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Attempt to create a user with a blank email</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>09:38:36 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='31'>Attempt to create a user with a blank email</a>
-<div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Attempt to create a user with a blank email</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>09:38:36 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='35'>Attempt to create a user with a blank email</a>
-<div class="">
-<span class="badge badge-default">Testing POST Method for Creating User.Attempt to create a user with a blank email</span>
+<span class="badge badge-default">Product Detail.User back to the dashboard page from the product detail page</span>
 </div>
 </td>
 </tr>
@@ -579,25 +294,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 31, 2024 09:38:30 AM</h3>
+<h3>Jun 1, 2024 01:00:13 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 31, 2024 09:38:36 AM</h3>
+<h3>Jun 1, 2024 01:00:37 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -613,12 +328,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> features passed
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>1</b> features failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -636,9 +351,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='77%'><b>7</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='22%'><b>2</b> scenarios failed,
+<small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -656,9 +371,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='92%'><b>25</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>12</b> steps passed</small></div>
 <div>
-<small data-tooltip='7%'><b>2</b> steps failed,
+<small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -675,7 +390,7 @@
 </div></div>
 <script>
 var timeline = {
-"Testing POST Method for Creating User":5.223
+"Product Detail":22.551
 };
 </script>
 <div class="row">
@@ -685,12 +400,12 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@Create</td>
-<td>7</td>
-<td>2</td>
+<td>@ProductDetail</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
-<td>77.778%</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 </tbody>
 </table></div>
@@ -701,19 +416,19 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 1,
+passParent: 1,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 7,
-failChild: 2,
+passChild: 3,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 25,
-failGrandChild: 2,
+passGrandChild: 12,
+failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
