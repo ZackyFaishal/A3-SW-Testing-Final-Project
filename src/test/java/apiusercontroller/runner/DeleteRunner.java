@@ -1,4 +1,4 @@
-package swaglabs.runner;
+package apiusercontroller.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -12,12 +12,13 @@ import java.io.IOException;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         publish=true,
-        features = {"src/test/java/swaglabs/features","src/test/java/apiusercontroller/features"},
-        glue = {"swaglabs/StepDefinitions","swaglabs/utility","apiusercontroller/StepDefinitions"},
+        features = "src/test/java/apiusercontroller/features",
+        glue = "apiusercontroller/StepDefinitions",
+        tags = "@Delete",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 
-public class TestRunner {
+public class DeleteRunner {
     @AfterClass
     public static void openHtmlReport() {
         try {

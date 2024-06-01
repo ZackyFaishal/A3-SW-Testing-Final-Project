@@ -10,14 +10,13 @@ import java.io.File;
 import java.io.IOException;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-        publish=true,
-        features = {"src/test/java/swaglabs/features","src/test/java/apiusercontroller/features"},
-        glue = {"swaglabs/StepDefinitions","swaglabs/utility","apiusercontroller/StepDefinitions"},
-        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
-)
+@CucumberOptions(publish = true,
 
-public class TestRunner {
+        features = "src/test/java/swaglabs/features", glue = { "swaglabs/StepDefinitions",
+                "swaglabs/utility" }, tags = "@ProductDetail", plugin = {
+                        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" })
+
+public class ProductDetailRunner {
     @AfterClass
     public static void openHtmlReport() {
         try {

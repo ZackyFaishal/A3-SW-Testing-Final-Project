@@ -18,23 +18,20 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    public static void sendkeys_username(String username)
-    {
+    public static void sendkeys_username(String username) {
         BrowserDriver.driver.findElement(By.xpath(username_xpath)).sendKeys(username);
     }
 
-    public static void sendkeys_password(String password)
-    {
+    public static void sendkeys_password(String password) {
         BrowserDriver.driver.findElement(By.xpath(password_xpath)).sendKeys(password);
     }
 
-    public static void click_login_button()
-    {
+    public static void click_login_button() {
         BrowserDriver.driver.findElement(By.xpath(login_button_xpath)).click();
         System.out.println("Login button clicked");
     }
 
-    public String validateError(){
+    public String validateError() {
         String actualErrorMessage = driver.findElement(By.cssSelector(".error-message-container.error")).getText();
         return actualErrorMessage;
     }

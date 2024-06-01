@@ -12,12 +12,14 @@ import java.io.IOException;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         publish=true,
-        features = {"src/test/java/swaglabs/features","src/test/java/apiusercontroller/features"},
-        glue = {"swaglabs/StepDefinitions","swaglabs/utility","apiusercontroller/StepDefinitions"},
+
+        features = "src/test/java/swaglabs/features",
+        glue = {"swaglabs/StepDefinitions","swaglabs/utility"},
+        tags = "@Cart",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 
-public class TestRunner {
+public class CartRunner {
     @AfterClass
     public static void openHtmlReport() {
         try {

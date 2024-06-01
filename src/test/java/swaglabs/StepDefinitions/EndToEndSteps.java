@@ -8,18 +8,13 @@ import org.openqa.selenium.WebDriver;
 import swaglabs.pages.DashboardPage;
 import swaglabs.pages.LoginPage;
 import swaglabs.pages.CartPage;
-import swaglabs.pages.CheckoutStepOne;
-import swaglabs.pages.CheckoutStepTwo;
-import swaglabs.pages.CheckoutComplete;
+import swaglabs.pages.CheckoutPage;
 import swaglabs.utility.BrowserDriver;
 
 public class EndToEndSteps {
     WebDriver driver = BrowserDriver.driver;
     DashboardPage dashboardPage = new DashboardPage(driver);
     CartPage cartPage = new CartPage(driver);
-    CheckoutStepOne checkoutStepOne = new CheckoutStepOne();
-    CheckoutStepTwo checkoutStepTwo = new CheckoutStepTwo();
-    CheckoutComplete checkoutComplete = new CheckoutComplete();
     LoginPage loginPage;
 
 
@@ -64,32 +59,30 @@ public class EndToEndSteps {
 
     @When("I Fill The Checkout Information Form with valid data.")
     public void i_fill_the_checkout_information_form_with_valid_data() {
-        checkoutStepOne.sendkeys_first_name("John");
-        checkoutStepOne.sendkeys_last_name("Doe");
-        checkoutStepOne.sendkeys_postal_code("12345");
+
     }
 
     @When("I entered first name {string}, last name {string}, postal code {string}")
     public void i_entered_first_name_last_name_postal_code(String firstName, String lastName, String postalCode) {
-        checkoutStepOne.sendkeys_first_name(firstName);
-        checkoutStepOne.sendkeys_last_name(lastName);
-        checkoutStepOne.sendkeys_postal_code(postalCode);
+        CheckoutPage.sendkeys_firstName(firstName);
+        CheckoutPage.sendkeys_lastName(lastName);
+        CheckoutPage.sendkeys_postalcode(postalCode);
     }
 
     @When("I Click Continue Button")
     public void i_click_continue_button() {
-        checkoutStepOne.click_continue_button();
+        CheckoutPage.click_continue();
     }
 
     @When("I see {string} in the confirmation page")
     public void i_see_in_the_confirmation_page(String productName) {
-        String summary = checkoutStepTwo.checkout_summary_container();
+        String summary = CheckoutPage.checkout_summary_container();
         assert summary.contains(productName);
     }
 
     @When("I Click Finish Button")
     public void i_click_finish_button() {
-        checkoutStepTwo.click_finish();
+        CheckoutPage.click_finish();
     }
 
     @When("I should see the confirmation message")
@@ -100,7 +93,7 @@ public class EndToEndSteps {
 
     @Then("I click Back Home button")
     public void i_click_back_home_button() {
-        checkoutComplete.click_back_to_products();
+        CheckoutPage.click_back_to_products();
     }
 
     @Then("I should see the dashboard page")
