@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 1, 2024 09:53:56 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jun 2, 2024 07:39:39 AM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('category-view')">
@@ -71,7 +76,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,31 +84,31 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@Menu</a>
+<a class="dropdown-item" href="#">@Update</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Menu</p>
+            <p class="name">Testing PUT Method for Update User</p>
             <p class="text-sm">
-              <span>9:53:59 PM</span> / <span>00:00:51:453</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>7:39:41 AM</span> / <span>00:00:34:140</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Menu</h5>
-<span class='badge badge-success'>06.01.2024 9:53:59 PM</span>
-<span class='badge badge-danger'>06.01.2024 9:54:50 PM</span>
-<span class='badge badge-default'>00:00:51:453</span>
+<h5 class="test-status text-fail">Testing PUT Method for Update User</h5>
+<span class='badge badge-success'>06.02.2024 7:39:41 AM</span>
+<span class='badge badge-danger'>06.02.2024 7:40:15 AM</span>
+<span class='badge badge-default'>00:00:34:140</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -115,30 +120,33 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User opens the navbar menu</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Update user without providing app-id in the header</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.DashboardSteps.login_with_valid_credentials()">
-                <span>Given I have logged in with valid credentials</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iHaveAnExistingUser()">
+                <span>Given I have an existing user</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.DashboardSteps.i_am_on_the_dashboard_page()">
-                <span>Given I am on the dashboard page</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.i_update_the_user_without_including_the_app_id_in_the_header()">
+                <span>When I update the user without including the app-id in the header</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.MenuSteps.user_clicks_the_menu_button()">
-                <span>When User click the menu button</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.the_response_body_should_contain(java.lang.String)">
+                <span>Then the response body should contain "APP_ID_MISSING"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.MenuSteps.program_displays_the_menu_with_the_following_options(java.util.List<java.lang.String>)">
-                <span>Then Program displays the menu with the following options:</span>
-      <div><table class='markup-table table '><tr><td>All items</td></tr><tr><td>About</td></tr><tr><td>Logout</td></tr><tr><td>Reset App State</td></tr></table>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.the_message_status_should_be(int)">
+                <span>And the message status should be 403 Forbidden</span>
+      <div>
       </div>
+              </div>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.the_database_condition_should_not_change()">
+                <span>And the database condition should not change</span>
       <div>
       </div>
               </div>
@@ -148,33 +156,28 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>User select about menu</div>
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Update user by providing wrong app id in header</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.DashboardSteps.login_with_valid_credentials()">
-                <span>Given I have logged in with valid credentials</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iHaveAnUser()">
+                <span>Given I have an user</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.DashboardSteps.i_am_on_the_dashboard_page()">
-                <span>Given I am on the dashboard page</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iUpdateTheUserWithoutIncludingTheIncorrectAppIdInTheHeader()">
+                <span>When I update the user without including the incorrect app-id in the header</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.MenuSteps.user_clicks_the_menu_button()">
-                <span>When User click the menu button</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.the_message_status_should_be(int)">
+                <span>And the message status should be 403 Forbidden</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.MenuSteps.user_click_the_about_menu()">
-                <span>And User click the About menu</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.MenuSteps.i_should_redirects_ti_the_information_about_swag()">
-                <span>Then I should redirects to the information about Swag</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.the_database_condition_should_not_change()">
+                <span>And the database condition should not change</span>
       <div>
       </div>
               </div>
@@ -184,34 +187,91 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>User select logout menu</div>
+        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Update user firstName with 2 characters</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.DashboardSteps.login_with_valid_credentials()">
-                <span>Given I have logged in with valid credentials</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iHaveAUserRegisteredOnTheSystem()">
+                <span>Given I have a user registered on the system</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.DashboardSteps.i_am_on_the_dashboard_page()">
-                <span>Given I am on the dashboard page</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iUpdateTheUserFirstNameWithOnly2Characters()">
+                <span>When I update the user firstName with only 2 characters</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.MenuSteps.user_clicks_the_menu_button()">
-                <span>When User click the menu button</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iShouldReceiveAnSuccessResponseWithStatusCode(int)">
+                <span>Then I should receive  success response with status code 200</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.MenuSteps.user_click_the_logout_menu()">
-                <span>And User click the logout menu</span>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="23"><span class="badge log pass-bg mr-2">Pass</span>Update user firstName with 50 characters</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iHaveAUserRegisteredOnTheSystem()">
+                <span>Given I have a user registered on the system</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="swaglabs.StepDefinitions.MenuSteps.i_should_be_logout_succesfully()">
-                <span>Then I should be logout successfully</span>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iUpdateTheUserFirstNameWithOnly50Characters()">
+                <span>When I update the user firstName with only 50 characters</span>
       <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iShouldReceiveAnSuccessResponseWithStatusCode(int)">
+                <span>Then I should receive  success response with status code 200</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="29"><span class="badge log fail-bg mr-2">Fail</span>Update user data with title and gender fields using numbers</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iHaveAUserRegisteredOnTheSystem()">
+                <span>Given I have a user registered on the system</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.iUpdateTheUserWithTitleAndGenderFieldsUsingTheFollowingData(java.util.Map<java.lang.String, java.lang.String>)">
+                <span>When I update the user with title and gender fields using the following data</span>
+      <div><table class='markup-table table '><tr><td>field</td><td>value</td></tr><tr><td>title</td><td>12345</td></tr><tr><td>gender</td><td>67890</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.the_message_status_should_be_bad_request(int)">
+                <span>Then the message status should be 400 Bad request</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Unexpected status code expected:<400> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at apiusercontroller.StepDefinitions.UpdateMethodSteps.the_message_status_should_be_bad_request(UpdateMethodSteps.java:53)
+	at ?.the message status should be 400 Bad request(file:///E:/Kuliah/SEMESTER%206/Pengujian%20Perangkat%20Lunak/Praktek/Tubes/A3-SW-Testing-Final-Project/src/test/java/apiusercontroller/features/UpdateMethod.feature:33)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="apiusercontroller.StepDefinitions.UpdateMethodSteps.the_database_condition_should_not_change()">
+                <span>And the database condition should not change</span>
+      <div>Step skipped
       </div>
               </div>
           </div>
@@ -229,7 +289,59 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view category-view attributes-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>07:40:14 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>Then the message status should be 400 Bad request</a>
+<div class="">
+<span class="badge badge-default">Testing PUT Method for Update User.Update user data with title and gender fields using numbers.Then the message status should be 400 Bad request</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
@@ -240,15 +352,17 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>3</span>
+<span class='badge log pass-bg'>4</span>
+<span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@Menu</p>
-<p class="duration text-sm">3 tests</p>
+<p class="name">@Update</p>
+<p class="duration text-sm">5 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@Menu</h4>
-<span status="pass" class='badge log pass-bg'>3 passed</span>
+<h4>@Update</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -261,31 +375,51 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>21:53:59 PM</td>
+<td>07:39:41 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>User opens the navbar menu</a>
+<a href="#" class="linked" test-id='1' id='2'>Update user without providing app-id in the header</a>
 <div class="">
-<span class="badge badge-default">Menu.User opens the navbar menu</span>
+<span class="badge badge-default">Testing PUT Method for Update User.Update user without providing app-id in the header</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>21:54:09 PM</td>
+<td>07:39:58 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='9'>User select about menu</a>
+<a href="#" class="linked" test-id='1' id='10'>Update user by providing wrong app id in header</a>
 <div class="">
-<span class="badge badge-default">Menu.User select about menu</span>
+<span class="badge badge-default">Testing PUT Method for Update User.Update user by providing wrong app id in header</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>21:54:43 PM</td>
+<td>07:40:03 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='17'>User select logout menu</a>
+<a href="#" class="linked" test-id='1' id='17'>Update user firstName with 2 characters</a>
 <div class="">
-<span class="badge badge-default">Menu.User select logout menu</span>
+<span class="badge badge-default">Testing PUT Method for Update User.Update user firstName with 2 characters</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>07:40:08 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='23'>Update user firstName with 50 characters</a>
+<div class="">
+<span class="badge badge-default">Testing PUT Method for Update User.Update user firstName with 50 characters</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>07:40:11 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Update user data with title and gender fields using numbers</a>
+<div class="">
+<span class="badge badge-default">Testing PUT Method for Update User.Update user data with title and gender fields using numbers</span>
 </div>
 </td>
 </tr>
@@ -306,25 +440,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 1, 2024 09:53:56 PM</h3>
+<h3>Jun 2, 2024 07:39:39 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 1, 2024 09:54:50 PM</h3>
+<h3>Jun 2, 2024 07:40:15 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -340,12 +474,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> features passed
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='100%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -363,9 +497,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
+<div><small data-tooltip='80%'><b>4</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='20%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -383,10 +517,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>14</b> steps passed</small></div>
+<div><small data-tooltip='89%'><b>17</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='5%'><b>1</b> steps failed,
+<b>1</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -402,7 +536,7 @@
 </div></div>
 <script>
 var timeline = {
-"Menu":51.453
+"Testing PUT Method for Update User":34.14
 };
 </script>
 <div class="row">
@@ -412,12 +546,12 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@Menu</td>
-<td>3</td>
+<td>@Update</td>
+<td>4</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>80%</td>
 </tr>
 </tbody>
 </table></div>
@@ -428,21 +562,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 3,
-failChild: 0,
+passChild: 4,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 14,
-failGrandChild: 0,
+passGrandChild: 17,
+failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 1,
 infoGrandChild: 0,
 eventsCount: 5,
 };

@@ -3,6 +3,7 @@ E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\swaglabs\runner\CartRunner.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\swaglabs\pages\CheckoutPage.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\swaglabs\StepDefinitions\LoginSteps.java
+E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\apiusercontroller\runner\UpdateRunner.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\swaglabs\runner\EndToEndRunner.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\swaglabs\utility\BrowserDriver.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\apiusercontroller\StepDefinitions\DeleteMethodSteps.java
@@ -12,6 +13,7 @@ E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\apiusercontroller\runner\GetRunner.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\swaglabs\StepDefinitions\ProductDetailSteps.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\swaglabs\StepDefinitions\EndToEndSteps.java
+E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\apiusercontroller\StepDefinitions\UpdateMethodSteps.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\swaglabs\StepDefinitions\MenuSteps.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\apiusercontroller\runner\CreateRunner.java
 E:\Kuliah\SEMESTER 6\Pengujian Perangkat Lunak\Praktek\Tubes\A3-SW-Testing-Final-Project\src\test\java\swaglabs\StepDefinitions\CartSteps.java
